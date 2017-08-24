@@ -6,6 +6,8 @@
 <ul>
   <li ng-repeat="set in sets" style="margin-top: 25px;">
     {{set._source.name}}
+
+    <a class="btn btn-sm btn-primary pull-right" ui-sref="create-model({featureSet: set._source.featureset})">Create Model</a>
     <a class="btn btn-sm btn-danger  pull-right" ng-href="" ng-click="deleteSet(set)">Delete</a>
 
     <ul ng-repeat="feature in set._source.featureset.features">

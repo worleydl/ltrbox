@@ -1,0 +1,23 @@
+<h4>Creating a Model</h4>
+<p>Using Feature Set: {{featureSet.name}}</p>
+
+
+<div class="form-group">
+  <label for="model-name">Model Name</label>
+  <input type="text" class="form-control" ng-model="form.modelName">
+</div>
+
+<div class="form-group">
+  <label for="feature-definition">Model Type</label>
+  <input type="text" class="form-control" ng-model="form.modelType">
+</div>
+
+<div class="form-group">
+  <label for="feature-definition">Model Definition</label>
+  <textarea class="form-control" rows=20 ng-model="form.modelBody"></textarea>
+</div>
+
+<div class="row pull-right">
+  <a class="btn btn-md btn-primary" ui-sref="sets">Cancel</a>
+  <a class="btn btn-md btn-primary" ng-click="createModel()">Save</a>
+</div>

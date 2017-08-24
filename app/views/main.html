@@ -7,9 +7,9 @@
   <li ng-repeat="feature in features" style="margin-top: 25px;">
     {{feature._source.name}}
 
-    <a class="btn btn-sm btn-danger  pull-right" ng-href="" ng-click="deleteFeature(feature)">Delete</a>
     <a class="btn btn-sm btn-primary pull-right" ui-sref="edit-feature({activeFeature: feature})">Edit</a>
-
+    <a class="btn btn-sm btn-danger  pull-right" ng-href="" ng-click="deleteFeature(feature)">Delete</a>
+    
     <ul>
       <li>Template Language: {{feature._source.feature.template_language}}</li>
       <li>Template: <pre>{{feature._source.feature.template}}</pre></li>

@@ -48,6 +48,14 @@ angular
         templateUrl: 'views/models.html',
         controller: 'LtrModelCtrl'
       })
+      .state('create-model', {
+        url: '/models/create',
+        templateUrl: 'views/create-model.html',
+        controller: 'LtrModelCtrl',
+        params: {
+          featureSet: null
+        }
+      })
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',

@@ -1,11 +1,14 @@
 <h4>Model List</h4>
 
 <ul>
-  <li ng-repeat="model in models">
+  <li ng-repeat="model in models" style="margin-top: 25px;">
     {{model._source.name}}
+    <a class="btn btn-sm btn-danger  pull-right" ng-href="" ng-click="deleteModel(model)">Delete</a>
+
     <ul>
       <li>Feature Set: {{model._source.model.feature_set.name}}</li>
-      <li>Model: <pre>{{model._source.model.model}}</pre></li>
+      <li>Type: {{model._source.model.model.type}}</li>
+      <li>Definition: <pre>{{model._source.model.model.definition}}</pre></li>
     </ul>
   </li>
 </ul>

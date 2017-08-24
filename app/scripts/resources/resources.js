@@ -29,6 +29,11 @@ angular.module('ltrboxApp')
         isArray: false,
         url: 'http://192.168.1.25:9200/_ltr/_featureset/:id/_addfeatures/:query'
       },
+      createModel: {
+        method: 'POST',
+        isArray: false,
+        url: 'http://192.168.1.25:9200/_ltr/_featureset/:id/_createmodel'
+      },
       query: {
         method: 'GET',
         isArray: true,
