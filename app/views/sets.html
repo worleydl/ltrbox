@@ -1,0 +1,12 @@
+<h4>Feature Set List</h4>
+
+<ul>
+  <li ng-repeat="set in sets">
+    {{set._source.name}}
+    <ul ng-repeat="feature in set._source.featureset.features">
+      <li>Name: {{feature.name}}</li>
+      <li>Template Language: {{feature.template_language}}</li>
+      <li>Template: <pre>{{feature.template}}</pre></li>
+    </ul>
+  </li>
+</ul>

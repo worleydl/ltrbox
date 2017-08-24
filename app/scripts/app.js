@@ -25,11 +25,14 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .state('sets', {
+        url: '/sets',
+        templateUrl: 'views/sets.html',
+        controller: 'FeatureSetCtrl'
+      })
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       });
-
-      console.log('hrm');
   });

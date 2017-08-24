@@ -8,10 +8,12 @@
  * Controller of the ltrboxApp
  */
 angular.module('ltrboxApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', 'Feature', function ($scope, Feature) {
+    $scope.featuresReady = false;
+
+    // Get a list of features
+    $scope.features = Feature.query(function() {
+        $scope.featuresReady = true;
+        console.log($scope.features);
+    });
+  }]);
