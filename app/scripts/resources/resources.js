@@ -26,4 +26,17 @@ angular.module('ltrboxApp')
         }
       }
     });
+  })
+// LtrModel resource
+  .factory('LtrModel', function($resource) {
+    return $resource('http://192.168.1.25:9200/_ltr/_model/:id', null, {
+      query: {
+        method: 'GET',
+        isArray: true,
+        transformResponse: function(data) {
+          var j_obj = angular.fromJson(data);
+          return j_obj.hits.hits;
+        }
+      }
+    });
   });

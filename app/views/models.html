@@ -1,0 +1,11 @@
+<h4>Model List</h4>
+
+<ul>
+  <li ng-repeat="model in models">
+    {{model._source.name}}
+    <ul>
+      <li>Feature Set: {{model._source.model.feature_set.name}}</li>
+      <li>Model: <pre>{{model._source.model.model}}</pre></li>
+    </ul>
+  </li>
+</ul>

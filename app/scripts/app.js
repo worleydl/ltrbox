@@ -30,6 +30,11 @@ angular
         templateUrl: 'views/sets.html',
         controller: 'FeatureSetCtrl'
       })
+      .state('models', {
+        url: '/models',
+        templateUrl: 'views/models.html',
+        controller: 'LtrModelCtrl'
+      })
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',
