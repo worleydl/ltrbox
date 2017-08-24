@@ -1,0 +1,28 @@
+<h4 ng-if="activeFeature">Editing a Feature</h4>
+<h4 ng-if="!activeFeature">Creating a New Feature</h4>
+
+
+<div class="form-group">
+  <label for="feature-name">Feature Name</label>
+  <input type="text" class="form-control" ng-model="form.featureName">
+</div>
+
+<div class="form-group">
+  <label for="feature-parameters">Parameters</label>
+  <p>Currently only query_string is available</p>
+</div>
+
+<div class="form-group">
+  <label for="feature-definition">Template Language</label>
+  <input type="text" class="form-control" ng-model="form.featureLanguage">
+</div>
+
+<div class="form-group">
+  <label for="feature-definition">Template Definition</label>
+  <textarea class="form-control" rows=20 ng-model="form.featureBody"></textarea>
+</div>
+
+<div class="row pull-right">
+  <a class="btn btn-md btn-primary" ui-sref="features">Cancel</a>
+  <a class="btn btn-md btn-primary" ng-click="saveFeature()">Save</a>
+</div>

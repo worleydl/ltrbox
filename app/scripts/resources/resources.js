@@ -12,6 +12,13 @@ angular.module('ltrboxApp')
           return j_obj.hits.hits;
         }
       }
+      /*save: {
+        method: 'POST',
+        isArray: false,
+        transformRequest: function(data) {
+          console.log(data);
+        }
+      }*/
     });
   })
 // FeatureSet resource

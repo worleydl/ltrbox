@@ -18,12 +18,20 @@ angular
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/features');
     $stateProvider
-      .state('home', {
-        url: '/home',
+      .state('features', {
+        url: '/features',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+      })
+      .state('edit-feature', {
+        url: '/features/edit',
+        templateUrl: 'views/feature-edit.html',
+        controller: 'MainCtrl',
+        params: {
+          activeFeature: null
+        }
       })
       .state('sets', {
         url: '/sets',
