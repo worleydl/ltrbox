@@ -1,8 +1,13 @@
-<h4>Feature Set List</h4>
+<div class="row">
+  <div class="col-md-6"><h4>Feature Set List</h4></div>
+  <div class="col-md-6"><a class="btn btn-md btn-primary pull-right" ui-sref="create-set">Create New</a></div>
+</div>
 
 <ul>
-  <li ng-repeat="set in sets">
+  <li ng-repeat="set in sets" style="margin-top: 25px;">
     {{set._source.name}}
+    <a class="btn btn-sm btn-danger  pull-right" ng-href="" ng-click="deleteSet(set)">Delete</a>
+
     <ul ng-repeat="feature in set._source.featureset.features">
       <li>Name: {{feature.name}}</li>
       <li>Template Language: {{feature.template_language}}</li>

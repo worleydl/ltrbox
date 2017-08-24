@@ -38,6 +38,11 @@ angular
         templateUrl: 'views/sets.html',
         controller: 'FeatureSetCtrl'
       })
+      .state('create-set', {
+        url: '/sets/create',
+        templateUrl: 'views/create-set.html',
+        controller: 'FeatureSetCtrl'
+      })
       .state('models', {
         url: '/models',
         templateUrl: 'views/models.html',

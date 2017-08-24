@@ -24,6 +24,11 @@ angular.module('ltrboxApp')
 // FeatureSet resource
   .factory('FeatureSet', function($resource) {
     return $resource('http://192.168.1.25:9200/_ltr/_featureset/:id', null, {
+      create: {
+        method: 'POST',
+        isArray: false,
+        url: 'http://192.168.1.25:9200/_ltr/_featureset/:id/_addfeatures/:query'
+      },
       query: {
         method: 'GET',
         isArray: true,

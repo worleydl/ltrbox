@@ -1,0 +1,21 @@
+<h4 ng-if="!activeFeature">Creating a New Feature Set</h4>
+
+<div class="form-group">
+  <label for="feature-name">Feature Set Name</label>
+  <input type="text" class="form-control" ng-model="form.setName">
+</div>
+
+<div class="form-group">
+  <label for="feature-query">Query for Features to Include</label>
+  <input type="text" class="form-control" ng-model="form.featureQuery">
+  <p>
+    Note: Specifying new features inside a new feature set is supported by the API for the LTR Plugin, however
+    this interface only supports creating feature sets by querying existing feature names.
+  </p>
+
+</div>
+
+<div class="row pull-right">
+  <a class="btn btn-md btn-primary" ui-sref="sets">Cancel</a>
+  <a class="btn btn-md btn-primary" ng-click="createSet()">Create</a>
+</div>
