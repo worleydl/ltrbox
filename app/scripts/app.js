@@ -56,6 +56,11 @@ angular
           featureSet: null
         }
       })
+      .state('evaluate', {
+        url: '/models/evaluate',
+        templateUrl: 'views/evaluate.html',
+        controller: 'LtrModelCtrl'
+      })
       .state('about', {
         url: '/about',
         templateUrl: 'views/about.html',

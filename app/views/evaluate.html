@@ -1,0 +1,24 @@
+<h4>Model Evaluation</h4>
+
+
+<select ng-model="form.selectedModel" ng-options="model for model in modelNames">
+</select>
+
+<div class="form-group">
+  <label for="feature-name">Query</label>
+  <input type="text" class="form-control" ng-model="form.query"/>
+</div>
+
+<div class="row text-center">
+  <a class="btn btn-md btn-primary" ng-click="search()">Search</a>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <h4 ng-repeat="res in results">{{res._source.original_title}}</h4>
+  </div>
+
+  <div class="col-md-6">
+    <h4 ng-repeat="res in ltrResults">{{res._source.original_title}}</h4>
+  </div>
+</div>

@@ -56,4 +56,17 @@ angular.module('ltrboxApp')
         }
       }
     });
+  })
+// TMDB resource
+  .factory('Tmdb', function($resource) {
+    return $resource('http://192.168.1.25:9200/tmdb/_search', null, {
+      search: {
+        method: 'POST',
+        isArray: true,
+        transformResponse: function(data) {
+          var j_obj = angular.fromJson(data);
+          return j_obj.hits.hits;
+        }
+      }
+    });
   });
